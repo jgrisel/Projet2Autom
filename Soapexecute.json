@@ -1,0 +1,29 @@
+{
+  "apiVersion": "opentestfactory.org/v1alpha1",
+  "kind": "Workflow",
+  "metadata": {
+    "name": "SoapUI"
+  },
+  "defaults": {
+    "runs-on": "soapui"
+  },
+  "jobs": {
+    "thisIsASuccess": {
+      "runs-on": "soapui",
+      "steps": [
+        {
+          "uses": "actions/checkout@v2",
+          "with": {
+            "repository": "https://github.com/jgrisel/Projet2Autom"
+          }
+        },
+        {
+          "uses": "soapui/execute@v1",
+          "with": {
+            "test": "Projet2Autom/REST-Project-2-soapui-project.xml#TestSuite 1"
+          }
+        }
+      ]
+    }
+  }
+}
