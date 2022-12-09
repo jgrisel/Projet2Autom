@@ -14,14 +14,14 @@ node {
     echo "We just ran The Squash Orchestrator with SOAPUI from GITHUB Projet2Autom"
 	stage ('generate report') {
 
-        dir("source") {
+        dir("Workspaces") {
 
           publishHTML (target: [
 
               allowMissing: true,
               alwaysLinkToLastBuild: true,
               keepAll: true,
-              reportDir: 'Workspaces',
+              reportDir: '',
               reportFiles: 'dependency-check-report.html',
               reportName: "Application-Dependency-Check-Report"
 
