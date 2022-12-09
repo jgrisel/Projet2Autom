@@ -21,7 +21,7 @@ node {
               allowMissing: true,
               alwaysLinkToLastBuild: true,
               keepAll: true,
-              reportDir: 'target',
+              reportDir: 'Workspaces',
               reportFiles: 'dependency-check-report.html',
               reportName: "Application-Dependency-Check-Report"
 
