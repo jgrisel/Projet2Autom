@@ -11,13 +11,23 @@ node {
         stepDepth: 3,
         dumpOnError: true
     )
-    echo "We just ran The Squash Orchestrator with Robot template test from GITLAB Squashautom"
-	publishHTML (target: [
-      allowMissing: false,
-      alwaysLinkToLastBuild: false,
-      keepAll: true,
-      reportDir: '',
-      reportFiles: 'index.html',
-      reportName: "RCov Report"
+    echo "We just ran The Squash Orchestrator with SOAPUI from GITHUB Projet2Autom"
     ])
+	stage ('generate report') {
+
+        dir("source") {
+
+          publishHTML (target: [
+
+              allowMissing: true,
+              alwaysLinkToLastBuild: true,
+              keepAll: true,
+              reportDir: 'target',
+              reportFiles: 'dependency-check-report.html',
+              reportName: "Application-Dependency-Check-Report"
+
+            ])
+		}
+			
+	}
 }
