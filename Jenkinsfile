@@ -12,4 +12,12 @@ node {
         dumpOnError: true
     )
     echo "We just ran The Squash Orchestrator with Robot template test from GITLAB Squashautom"
+	publishHTML (target: [
+      allowMissing: false,
+      alwaysLinkToLastBuild: false,
+      keepAll: true,
+      reportDir: 'coverage',
+      reportFiles: 'index.html',
+      reportName: "RCov Report"
+    ])
 }
