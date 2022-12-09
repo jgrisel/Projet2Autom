@@ -20,7 +20,7 @@
         {
           "uses": "soapui/execute@v1",
           "with": {
-            "test": "Projet2Autom/REST-Project-2-soapui-project.xml#TestSuite1#Test1"
+            "test": "Projet2Autom/Projet2_LibrePlan.xml#TestSuite1"
           }
         }
       ]
