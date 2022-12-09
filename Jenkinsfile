@@ -16,7 +16,7 @@ node {
       allowMissing: false,
       alwaysLinkToLastBuild: false,
       keepAll: true,
-      reportDir: 'C:\formation\projet2',
+      reportDir: '',
       reportFiles: 'index.html',
       reportName: "RCov Report"
     ])
