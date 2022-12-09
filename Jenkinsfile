@@ -12,7 +12,6 @@ node {
         dumpOnError: true
     )
     echo "We just ran The Squash Orchestrator with SOAPUI from GITHUB Projet2Autom"
-    ])
 	stage ('generate report') {
 
         dir("source") {
